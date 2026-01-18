@@ -21,13 +21,13 @@
   --font-title: 1.5rem;
   --font-primary: 1rem;
   --font-badge: 1.125rem;
-  --xx-bold:900;
+  --xx-bold: 900;
   --x-bold: 800;
   --bold: 700;
-  --semibold:600;
+  --semibold: 600;
   --medium: 500;
---regular: 400;
---thin:300;
+  --regular: 400;
+  --thin: 300;
 }
 
 /* SHARED CSS START */
@@ -51,27 +51,30 @@ button {
   cursor: pointer;
 }
 
-.primary-btn{
-    background: var(--gradient);
-    padding: 12px 16px;
-    font-size: var(--font-primary);
-    font-weight: var(--semibold);
-    color: var(--text-primary);
-    border: none;
-    border-radius: 40px;
+.primary-btn {
+  background: var(--gradient);
+  padding: 12px 16px;
+  font-size: var(--font-primary);
+  font-weight: var(--semibold);
+  color: var(--text-primary);
+  border: none;
+  border-radius: 40px;
 }
 
 /* SHARED CSS END */
 
 /* MAIN CSS START */
+body {
+  background-color: var(--bg-primary);
+}
+/* HEADER RELATED CSS */
 header {
   background-color: var(--bg-primary);
-  height: 100%;
-  height: 92px;
+  border-bottom: 1px solid #412567;
 }
 
 #navbar {
-  height: 100%;
+  height: 92px;
   align-items: center;
   justify-content: space-between;
 }
@@ -100,12 +103,21 @@ nav > .logo > a > h1 > #logo-gradient {
   font-weight: var(--medium);
 }
 
-.nav-btn > #menubar{
-    display: none;
-    color: var(--text-primary);
-    background: transparent;
-    border: none;
-    font-size: var(--font-title);
+.nav-btn > #menubar {
+  display: none;
+  color: var(--text-primary);
+  background: transparent;
+  border: none;
+  font-size: var(--font-title);
 }
-
+/* BANNER RELATED CSS */
+#banner {
+  background-image:
+    url("../images/microphone.png"), url(../images/hero-circle.png),
+    url(../images/hero-bg.png);
+  background-repeat: no-repeat;
+  background-position: center 40%, center 40%, top;
+  background-size: auto, 21%, cover;
+  height: 700px;
+}
 /* MAIN CSS END */
