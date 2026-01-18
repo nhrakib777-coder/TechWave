@@ -13,4 +13,19 @@
   .nav-btn #menubar{
     display: block;
   }
+
+  #banner {
+    
+  background-image:
+    url("../images/microphone.png"), url(../images/hero-circle.png),
+    url(../images/mobile-hero-bg.png);
+  background-repeat: no-repeat;
+  background-position:  center 15%, center 9%, top;
+  background-size: 10%, 40%, 100%;
+}
+#banner > .badges{
+    position: absolute;
+    left: 55%;
+    top: 9%;
+}
 }
