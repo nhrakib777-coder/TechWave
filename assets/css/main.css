@@ -48,6 +48,8 @@
   font-size: var(--font-heading);
   font-weight: var(--bold);
   margin-bottom: 16px;
+  text-align: center;
+  color: var(--text-primary);
 }
 .section-description {
   font-size: var(--font-primary);
@@ -194,12 +196,91 @@ nav > .logo > a > h1 > #logo-gradient {
   margin: 50px auto;
 }
 
-.about-centext{
-    width: 60%;
-    margin: 0 auto;
-    margin-bottom: 40px;
+.about-centext {
+  width: 60%;
+  margin: 0 auto;
+  margin-bottom: 40px;
 }
 
+/* SUMMARY RELATED STYLE */
+.summary-content {
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
 
-
+.summary-card {
+  text-align: center;
+}
+.summary-heading {
+  font-size: var(--font-heading);
+  color: var(--text-special);
+  font-weight: var(--bold);
+}
+.summary-name {
+  font-size: var(--font-primary);
+  font-weight: var(--regular);
+  color: var(--text-primary);
+  line-height: 1.25rem;
+  text-transform: uppercase;
+}
+/* CHOOSE CARD RELATED CSS */
+#choose{
+    margin: 80px 0;
+    padding: 40px 0;
+    background-color: var(--bg-secondary);
+}
+.audio-card {
+  grid-area: audio;
+  flex-direction: column;
+  justify-content: center;
+}
+.mobile-card {
+  grid-area: mobile;
+  flex-direction: column;
+  justify-content: center;
+}
+.global-card {
+  grid-area: global;
+  flex-direction: column;
+  justify-content: center;
+}
+.exclusive-card {
+  grid-area: exclusive;
+}
+.resources-card {
+  grid-area: resources;
+}
+.choose-content {
+  display: grid;
+  gap: 40px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "audio mobile mobile"
+    "audio global global"
+    "exclusive exclusive resources";
+    margin-top: 50px;
+}
+.choose-card {
+  background-color: var(--bg-card);
+  padding: 40px;
+  color: var(--text-primary);
+  border-radius: 40px;
+}
+.choose-card img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 16px;
+}
+.card-title {
+  font-size: var(--font-special);
+  font-weight: var(--bold);
+  margin-bottom: 20px;
+}
+.card-description {
+  font-size: var(--font-primary);
+  font-weight: var(--regular);
+  line-height: 2rem;
+  margin-bottom: 20px;
+}
 /* MAIN CSS END */

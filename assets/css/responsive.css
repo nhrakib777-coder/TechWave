@@ -39,16 +39,33 @@
     font-size: 2.5rem;
   }
 
-  .about-centext{
+  .about-centext {
     width: 100%;
-}
-.section-title{
+  }
+  .section-title {
     font-size: var(--font-special);
-}
+  }
+
+  .summary-content {
+    gap: 40px 0;
+    flex-wrap: wrap;
+  }
+
+  .choose-content {
+    display: grid;
+
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "audio"
+      "mobile"
+      "global"
+      "exclusive"
+      "resources";
+  }
 }
 
-@media screen and (min-width:576px) and (max-width:992px){
-    #banner {
+@media screen and (min-width: 576px) and (max-width: 992px) {
+  #banner {
     height: 450px;
     background-image:
       url("../images/microphone.png"), url(../images/hero-circle.png),
@@ -60,7 +77,7 @@
       center 30%;
     background-size: 7%, 25%, 100%;
   }
-#banner > .badges {
+  #banner > .badges {
     position: absolute;
     left: 53%;
     top: 10%;
@@ -72,7 +89,17 @@
     height: 100%;
     margin-top: 50px;
     padding-bottom: 50px;
-}
+  }
+  .choose-content {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "audio mobile"
+      "global exclusive"
+      "resources resources";
+  }
+  
 }
 
 /* @media screen and (min-width:992px) and (max-width:1400px){
