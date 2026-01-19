@@ -2,7 +2,7 @@
 @media screen and (max-width: 576px) {
   .container {
     width: 100%;
-    padding: 0 20px;
+    padding: 20px;
   }
   .menu {
     display: none;
@@ -24,7 +24,7 @@
       center 27%,
       center 18%,
       top;
-    background-size: 10%, 40%, 100%;
+    background-size: 10%, 40%, contain;
   }
   #banner > .badges {
     position: absolute;
@@ -61,6 +61,57 @@
       "global"
       "exclusive"
       "resources";
+  }
+
+  .featured-content {
+    flex-direction: column;
+    gap: 30px 0;
+  }
+
+  .featured-card {
+    width: 100%;
+  }
+  #host {
+    padding: 0 20px;
+  }
+  .host-content {
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    padding: 20px;
+  }
+  .host-socials {
+    justify-content: center;
+  }
+  .host-socials a {
+    font-size: 1.2rem;
+    padding: 12px;
+  }
+
+  footer {
+    background: url(../images/footer-mobile-bg.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom center;
+    width: 100%;
+    min-height: 200px;
+  }
+  .footer-content {
+    padding: 20px 0;
+  }
+  .footer-logo {
+    font-size: 1.5rem;
+  }
+
+  .footer-social-links {
+    line-height: 0;
+    gap: 0 20px;
+    flex-wrap: wrap;
+  }
+  .footer-social-links > a {
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 }
 
@@ -99,7 +150,6 @@
       "global exclusive"
       "resources resources";
   }
-  
 }
 
 /* @media screen and (min-width:992px) and (max-width:1400px){

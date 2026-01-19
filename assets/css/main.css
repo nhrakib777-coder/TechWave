@@ -51,10 +51,12 @@
   text-align: center;
   color: var(--text-primary);
 }
-.section-description {
+.section-description,
+.card-description {
   font-size: var(--font-primary);
   font-weight: var(--regular);
   line-height: 1.25rem;
+  opacity: 60%;
 }
 a,
 button {
@@ -93,13 +95,13 @@ header {
   justify-content: space-between;
 }
 
-.logo > a > h1 {
+.logo > a > h1 , .footer-logo {
   text-decoration: none;
   color: var(--text-primary);
   font-weight: bold;
 }
 
-nav > .logo > a > h1 > #logo-gradient {
+.logo-gradient   {
   background: var(--gradient);
   -webkit-background-clip: text;
   background-clip: text;
@@ -225,10 +227,10 @@ nav > .logo > a > h1 > #logo-gradient {
   text-transform: uppercase;
 }
 /* CHOOSE CARD RELATED CSS */
-#choose{
-    margin: 80px 0;
-    padding: 40px 0;
-    background-color: var(--bg-secondary);
+#choose {
+  margin: 80px 0;
+  padding: 40px 0;
+  background-color: var(--bg-secondary);
 }
 .audio-card {
   grid-area: audio;
@@ -259,9 +261,10 @@ nav > .logo > a > h1 > #logo-gradient {
     "audio mobile mobile"
     "audio global global"
     "exclusive exclusive resources";
-    margin-top: 50px;
+  margin-top: 50px;
 }
-.choose-card {
+.choose-card,
+.featured-card {
   background-color: var(--bg-card);
   padding: 40px;
   color: var(--text-primary);
@@ -273,14 +276,109 @@ nav > .logo > a > h1 > #logo-gradient {
   margin-bottom: 16px;
 }
 .card-title {
+  color: var(--text-primary);
   font-size: var(--font-special);
   font-weight: var(--bold);
   margin-bottom: 20px;
 }
 .card-description {
+  color: var(--text-primary);
   font-size: var(--font-primary);
   font-weight: var(--regular);
   line-height: 2rem;
   margin-bottom: 20px;
+}
+
+/* FEATURED RELATED STYLE START */
+
+.featured-content {
+  justify-content: space-between;
+  margin: 50px auto;
+}
+
+.featured-card iframe {
+  width: 100%;
+  border-radius: 40px 40px 0 0;
+}
+
+.featured-card {
+  width: 31%;
+  padding: 0;
+}
+.featured-context {
+  padding: 30px;
+}
+
+.video-duration {
+  color: var(--text-special);
+  font-weight: var(--semibold);
+}
+/* HOST RELATED STYLE START */
+#host {
+  margin: 50px 0;
+}
+
+.host-content {
+  background-color: var(--bg-card);
+  
+  border-radius: 40px;
+  align-items: center;
+  gap: 40px;
+  padding: 30px;
+}
+
+.host-content > .host-img {
+  border-radius: 50%;
+}
+
+.host-socials {
+  gap: 30px;
+}
+
+.host-socials a {
+  font-size: 1.5rem;
+  padding: 15px;
+  border: 2px solid #533c72;
+  border-radius: 50%;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* FOOTER RELATED STYLE */
+footer{
+    background: url(../images/footer-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    min-height: 300px;
+    text-align: center;
+    
+}
+.footer-content{
+padding: 50px 0;
+}
+
+.footer-logo{
+    font-size: var(--font-heading);
+
+}
+
+.footer-social-links{
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 0;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.footer-social-links > a{
+    color: var(--text-primary);
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 /* MAIN CSS END */
