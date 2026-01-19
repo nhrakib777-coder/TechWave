@@ -1,7 +1,7 @@
 /* RESPONSIVE FOR MOBILE */
 @media screen and (max-width: 576px) {
   /* CONTAINER */
-    .container {
+  .container {
     width: 100%;
     padding: 20px;
   }
@@ -15,7 +15,7 @@
   .nav-btn #menubar {
     display: block;
   }
-/* BANNER */
+  /* BANNER */
   #banner {
     min-height: 420px;
 
@@ -41,19 +41,19 @@
   .banner-title {
     font-size: 2.5rem;
   }
-/* ABOUT */
+  /* ABOUT */
   .about-centext {
     width: 100%;
   }
   .section-title {
     font-size: var(--font-special);
   }
-/* SUMMARY */
+  /* SUMMARY */
   .summary-content {
     gap: 40px 0;
     flex-wrap: wrap;
   }
-/* CHOOSE */
+  /* CHOOSE */
   .choose-content {
     display: grid;
 
@@ -65,7 +65,7 @@
       "exclusive"
       "resources";
   }
-/* FEATURED */
+  /* FEATURED */
   .featured-content {
     flex-direction: column;
     gap: 30px 0;
@@ -74,7 +74,7 @@
   .featured-card {
     width: 100%;
   }
-  .play-btn{
+  .play-btn {
     width: 55px;
     height: 55px;
     font-size: 22px;
@@ -97,7 +97,7 @@
     font-size: 1.2rem;
     padding: 12px;
   }
-/* FOOTER */
+  /* FOOTER */
   footer {
     background: url(../images/footer-mobile-bg.png);
     background-repeat: no-repeat;
