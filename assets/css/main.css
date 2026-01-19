@@ -28,6 +28,7 @@
   --medium: 500;
   --regular: 400;
   --thin: 300;
+  --card-title: 1.6rem;
 }
 
 /* SHARED CSS START */
@@ -50,6 +51,7 @@
   text-align: center;
   color: var(--text-primary);
 }
+
 .section-description,
 .card-description {
   font-size: var(--font-primary);
@@ -278,7 +280,7 @@ header {
 }
 .card-title {
   color: var(--text-primary);
-  font-size: var(--font-special);
+  font-size: var(--card-title);
   font-weight: var(--bold);
   margin-bottom: 20px;
 }
@@ -297,17 +299,47 @@ header {
   margin: 50px auto;
 }
 
-.featured-card iframe {
-  height: auto;
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  border-radius: 40px 40px 0 0;
-}
-
 .featured-card {
   width: 31%;
   padding: 0;
 }
+
+.video-box {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+}
+
+.video-box img {
+  width: 100%;
+  display: block;
+  aspect-ratio: 16 / 9;
+  border-radius: 40px 40px 0 0;
+}
+.video-box > .play-btn {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(30deg, #f7e93f 0%, #fb09b4 48%, #9100f8 100%);
+  color: #fff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 28px;
+  text-decoration: none;
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+.play-btn:hover {
+  transform: scale(1.1);
+  background: rgba(0, 0, 0, 0.85);
+}
+
 .featured-context {
   padding: 30px;
 }
@@ -428,6 +460,20 @@ section {
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
 }
 
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.play-btn {
+  animation: pulse 2s infinite;
+}
 /* BUTTON HOVER EFFECT */
 button {
   transition: transform 0.3s ease;

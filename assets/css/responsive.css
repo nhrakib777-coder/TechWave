@@ -74,6 +74,11 @@
   .featured-card {
     width: 100%;
   }
+  .play-btn{
+    width: 55px;
+    height: 55px;
+    font-size: 22px;
+  }
   /* HOST */
   #host {
     padding: 0 20px;
