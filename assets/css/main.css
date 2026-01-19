@@ -40,8 +40,7 @@
   display: flex;
 }
 .container {
-  width: 75%;
-  max-width: 1440px;
+  width: min(90%, 1440px);
   margin: auto;
 }
 .section-title {
@@ -95,13 +94,14 @@ header {
   justify-content: space-between;
 }
 
-.logo > a > h1 , .footer-logo {
+.logo > a > h1,
+.footer-logo {
   text-decoration: none;
   color: var(--text-primary);
   font-weight: bold;
 }
 
-.logo-gradient   {
+.logo-gradient {
   background: var(--gradient);
   -webkit-background-clip: text;
   background-clip: text;
@@ -129,16 +129,17 @@ header {
 /* BANNER RELATED CSS */
 #banner {
   position: relative;
+  min-height: 100vh;
   background-image:
     url("../images/microphone.png"), url(../images/hero-circle.png),
     url(../images/hero-bg.png);
   background-repeat: no-repeat;
   background-position:
-    center 35%,
     center 32%,
+    center 26%,
     top;
   background-size: auto, 21%, 100%;
-  height: 800px;
+  height: auto;
 }
 #banner > .badges {
   position: absolute;
@@ -160,7 +161,7 @@ header {
   justify-content: center;
   align-items: end;
   height: 100%;
-  padding-bottom: 50px;
+  padding-top: 380px;
 }
 
 .banner-context {
@@ -297,7 +298,9 @@ header {
 }
 
 .featured-card iframe {
+  height: auto;
   width: 100%;
+  aspect-ratio: 16 / 9;
   border-radius: 40px 40px 0 0;
 }
 
@@ -320,7 +323,7 @@ header {
 
 .host-content {
   background-color: var(--bg-card);
-  
+
   border-radius: 40px;
   align-items: center;
   gap: 40px;
@@ -347,38 +350,89 @@ header {
 }
 
 /* FOOTER RELATED STYLE */
-footer{
-    background: url(../images/footer-bg.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    min-height: 300px;
-    text-align: center;
-    
+footer {
+  background: url(../images/footer-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  min-height: 300px;
+  text-align: center;
 }
-.footer-content{
-padding: 50px 0;
-}
-
-.footer-logo{
-    font-size: var(--font-heading);
-
+.footer-content {
+  padding: 50px 0;
 }
 
-.footer-social-links{
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 40px;
-    padding: 0;
-    max-width: 80%;
-    margin: 0 auto;
+.footer-logo {
+  font-size: var(--font-heading);
 }
 
-.footer-social-links > a{
-    color: var(--text-primary);
-    margin-top: 20px;
-    margin-bottom: 20px;
+.footer-social-links {
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 0;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.footer-social-links > a {
+  color: var(--text-primary);
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 /* MAIN CSS END */
+/* ANIMATION RELATED STYLE */
+
+section {
+  animation: fadeUp 0.8s ease both;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* FLOATING HERO BADGE */
+#banner .badges {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translate(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+/* CARD HOVER EFFECT */
+.choose-card,
+.featured-card {
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.choose-card:hover,
+.featured-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+/* BUTTON HOVER EFFECT */
+button {
+  transition: transform 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+}

@@ -15,25 +15,26 @@
   }
 
   #banner {
-    height: 400px;
+    min-height: 420px;
+
     background-image:
       url("../images/microphone.png"), url(../images/hero-circle.png),
       url(../images/mobile-hero-bg.png);
-    background-repeat: no-repeat;
+    background-repeat: no-repeat, no-repeat, no-repeat;
     background-position:
-      center 27%,
-      center 18%,
+      center 24%,
+      center 15%,
       top;
-    background-size: 10%, 40%, contain;
+    background-size: 12%, 40%, contain;
   }
   #banner > .badges {
     position: absolute;
-    left: 55%;
-    top: 10%;
+    top: 8%;
+    left: 54%;
   }
 
   .banner-content {
-    padding-bottom: 40px;
+    padding-top: 180px;
   }
   .banner-title {
     font-size: 2.5rem;
@@ -115,55 +116,10 @@
   }
 }
 
-@media screen and (min-width: 576px) and (max-width: 992px) {
-  #banner {
-    height: 450px;
-    background-image:
-      url("../images/microphone.png"), url(../images/hero-circle.png),
-      url(../images/hero-bg.png);
-    background-repeat: no-repeat;
-    background-position:
-      center 30%,
-      center 20%,
-      center 30%;
-    background-size: 7%, 25%, 100%;
-  }
-  #banner > .badges {
-    position: absolute;
-    left: 53%;
-    top: 10%;
-  }
-  .banner-content {
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    height: 100%;
-    margin-top: 50px;
-    padding-bottom: 50px;
-  }
-  .choose-content {
-    display: grid;
-
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas:
-      "audio mobile"
-      "global exclusive"
-      "resources resources";
-  }
+/* RESPONSIVE FOR TABLET */
+@media screen and (min-width: 576px) and (max-width: 992px){
+    /* CONTAINER */
+    .container{
+        width: 90%;
+    }
 }
-
-/* @media screen and (min-width:992px) and (max-width:1400px){
-    #banner {
-  position: relative;
-  background-image:
-    url("../images/microphone.png"), url(../images/hero-circle.png),
-    url(../images/hero-bg.png);
-  background-repeat: no-repeat;
-  background-position:
-    center 35%,
-    center 32%,
-    top;
-  background-size: auto, 21%, 100%;
-  height: 800px;
-}
-} */
