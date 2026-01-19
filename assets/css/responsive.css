@@ -10,22 +10,83 @@
   .sub-btn {
     display: none;
   }
-  .nav-btn #menubar{
+  .nav-btn #menubar {
     display: block;
   }
 
   #banner {
-    
-  background-image:
-    url("../images/microphone.png"), url(../images/hero-circle.png),
-    url(../images/mobile-hero-bg.png);
-  background-repeat: no-repeat;
-  background-position:  center 15%, center 9%, top;
-  background-size: 10%, 40%, 100%;
-}
-#banner > .badges{
+    height: 400px;
+    background-image:
+      url("../images/microphone.png"), url(../images/hero-circle.png),
+      url(../images/mobile-hero-bg.png);
+    background-repeat: no-repeat;
+    background-position:
+      center 27%,
+      center 18%,
+      top;
+    background-size: 10%, 40%, 100%;
+  }
+  #banner > .badges {
     position: absolute;
     left: 55%;
-    top: 9%;
+    top: 10%;
+  }
+
+  .banner-content {
+    padding-bottom: 40px;
+  }
+  .banner-title {
+    font-size: 2.5rem;
+  }
+
+  .about-centext{
+    width: 100%;
+}
+.section-title{
+    font-size: var(--font-special);
 }
 }
+
+@media screen and (min-width:576px) and (max-width:992px){
+    #banner {
+    height: 450px;
+    background-image:
+      url("../images/microphone.png"), url(../images/hero-circle.png),
+      url(../images/hero-bg.png);
+    background-repeat: no-repeat;
+    background-position:
+      center 30%,
+      center 20%,
+      center 30%;
+    background-size: 7%, 25%, 100%;
+  }
+#banner > .badges {
+    position: absolute;
+    left: 53%;
+    top: 10%;
+  }
+  .banner-content {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    height: 100%;
+    margin-top: 50px;
+    padding-bottom: 50px;
+}
+}
+
+/* @media screen and (min-width:992px) and (max-width:1400px){
+    #banner {
+  position: relative;
+  background-image:
+    url("../images/microphone.png"), url(../images/hero-circle.png),
+    url(../images/hero-bg.png);
+  background-repeat: no-repeat;
+  background-position:
+    center 35%,
+    center 32%,
+    top;
+  background-size: auto, 21%, 100%;
+  height: 800px;
+}
+} */
